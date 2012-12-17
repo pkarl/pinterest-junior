@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<div class="pinterst-panel-col">
+
+		{% for panel in panels %}
+
+			<div class="pinterest-panel">
+				
+				{% if panel.thumbnail_url %}
+					<a href="{{ panel.url }}">
+						<img src="{{ panel.thumbnail_url }}">
+					</a>
+				{% endif %}
+
+				<p>{{ panel.description }}</p>
+				<div class="sub-panel">
+					<p><a href="{{ panel.url }}">{{ panel.title }}</a> by <a href="{{ panel.provider_url }}">{{ panel.provider_name }}</a></p>
+				</div>
+			</div>
+
+		{% endfor %}
+
+	</div>
+
+{% endblock %}

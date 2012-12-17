@@ -1,0 +1,47 @@
+body {
+	font-size: 14px;
+	background: url('/static/images/debut_light.png');
+
+	font-family: "helvetica neue", arial, sans-serif;
+}
+
+.pinterst-panel-col {
+	width: 225px;
+	padding: 1em;
+}
+
+.pinterest-panel {
+	border: 1px solid #b9b9b9;
+	max-width: 225px;
+	background-color: #FFF;
+	margin-bottom: 1em;
+	box-shadow: 1px 1px 2px #DEDEDE;
+}
+	.pinterest-panel a > img {
+		width: 88%;
+		margin: 1em 1em 0 1em;
+	}
+
+	.pinterest-panel p {
+		line-height: 1.35em;
+		font-size: 11px;
+	}
+
+	.pinterest-panel > p {
+		margin: 1em;
+	}
+
+.sub-panel {
+	background-color: rgb(241, 240, 240);	
+	padding: 1em;
+}
+	.sub-panel a {
+		font-weight: bold;
+		text-decoration: none;
+		color: #8C7E7E;
+	}
+	.sub-panel p {
+		color: #b9b9b9;
+		padding: 0;
+		margin: 0;
+	}
