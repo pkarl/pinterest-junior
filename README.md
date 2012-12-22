@@ -17,6 +17,8 @@ httplib2==0.7.7
 wsgiref==0.1.2
 ```
 
+I recommend you use the wonderful `virtualenv` and `virtualenvwrapper` tools for your development environment.
+
 ## TODO
 
 * JS to lay results out in mulitple columns
