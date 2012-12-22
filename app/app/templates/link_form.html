@@ -1,4 +1,3 @@
 <form action="/process_url/" method="post">{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Submit" />
+		<label for="id_url">url:</label> <input type="text" id="id_url" name="url"> <input type="submit" value="Post a link" />
 </form>

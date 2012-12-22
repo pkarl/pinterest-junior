@@ -3,6 +3,16 @@ body {
 	background: url('/static/images/debut_light.png');
 
 	font-family: "helvetica neue", arial, sans-serif;
+
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: #FFF;
+	padding: 1em;
+
+	text-align: center;
 }
 
 .pinterst-panel-col {

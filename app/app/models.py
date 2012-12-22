@@ -12,6 +12,9 @@ class Link(models.Model):
     date_created = models.DateTimeField(auto_now=True, editable=False)
 
     def save(self, *args, **kwargs):
+        """
+            custom save function to grab URL information when necessary
+        """
         if not self.data:
             self.set_link_data()
         super(Link, self).save(*args, **kwargs)
