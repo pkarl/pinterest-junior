@@ -4,6 +4,19 @@ This is a super simple Django app that uses the embedly API to replicated Pinter
 
 Admin user/pass is `admin` / `admin`
 
+## Requirements
+
+If you're using `pip` you can pull in the reqs with a `pip install -r requirements.txt`
+
+If not, here's what's in there:
+
+```
+Django==1.4.3
+Embedly==0.4.3
+httplib2==0.7.7
+wsgiref==0.1.2
+```
+
 ## TODO
 
 * JS to lay results out in mulitple columns
