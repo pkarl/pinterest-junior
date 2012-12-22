@@ -2,10 +2,12 @@
 
 This is a super simple Django app that uses the embedly API to replicated Pinterest.
 
+Admin user/pass is `admin` / `admin`
+
 ## TODO
 
-* store the results of embedly's responses in a DB (indexed by URL)
 * JS to lay results out in mulitple columns
-* forms code to add sites via UI
+* refine form template to use input[type=text] instead of textarea
+* style form
 * error handling code
 * tests
