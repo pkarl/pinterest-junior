@@ -2,6 +2,7 @@ from embedly import Embedly
 
 from django.db import models
 from django.forms import ModelForm
+from django.contrib import admin
 
 from settings import EMBEDLY_KEY
 
@@ -10,7 +11,7 @@ class Link(models.Model):
     url = models.TextField()
     data = models.TextField(editable=False)
     date_created = models.DateTimeField(auto_now=True, editable=False)
-
+ 
     def save(self, *args, **kwargs):
         """
             custom save function to grab URL information when necessary
@@ -33,3 +34,8 @@ class Link(models.Model):
 class LinkForm(ModelForm):
     class Meta:
         model = Link
+
+class LinkAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Link, LinkAdmin)

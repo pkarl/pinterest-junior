@@ -15,57 +15,42 @@ header {
 	text-align: center;
 }
 
-.pinboard-wrapper {
-	width: 100%;
-}
-	.pinboard {
-		margin: 0 auto;
-
-		-webkit-transition: all 150ms linear;
-	    -moz-transition: 	all 150ms linear;
-	    -o-transition: 		all 150ms linear;
-	    -ms-transition: 	all 150ms linear;
-	    transition: 		all 150ms linear;
-	}
-
-.pin-col {
-	width: 15em;
+.pinterst-panel-col {
+	width: 225px;
 	padding: 1em;
-	float: left;
-	opacity: 0.1;
 }
 
-.pin {
+.pinterest-panel {
 	border: 1px solid #b9b9b9;
 	max-width: 225px;
 	background-color: #FFF;
 	margin-bottom: 1em;
 	box-shadow: 1px 1px 2px #DEDEDE;
 }
-	.pin a > img {
+	.pinterest-panel a > img {
 		width: 88%;
 		margin: 1em 1em 0 1em;
 	}
 
-	.pin p {
+	.pinterest-panel p {
 		line-height: 1.35em;
 		font-size: 11px;
 	}
 
-	.pin > p {
+	.pinterest-panel > p {
 		margin: 1em;
 	}
 
-.sub-pin {
+.sub-panel {
 	background-color: rgb(241, 240, 240);	
 	padding: 1em;
 }
-	.sub-pin a {
+	.sub-panel a {
 		font-weight: bold;
 		text-decoration: none;
 		color: #8C7E7E;
 	}
-	.sub-pin p {
+	.sub-panel p {
 		color: #b9b9b9;
 		padding: 0;
 		margin: 0;

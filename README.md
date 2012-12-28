@@ -19,6 +19,12 @@ wsgiref==0.1.2
 
 I recommend you use the wonderful `virtualenv` and `virtualenvwrapper` tools for your development environment.
 
+## Static file handling
+
+Static files are JavaScript, CSS, or image files that accompany each app. Every application module in the django project has its own `/static` directory which contains the static files for that module.
+
+There is a global `/static` directory located at the project root (the contents of which are ignored by git) where all of these static files will be collected upon running the `python manage.py collectstatic` command, which refers to the `STATIC_ROOT`, `STATIC_URL`, `STATICFILES_DIRS`, and `STATICFILES_FINDERS` vars in your `settings.py`.
+
 ## TODO
 
 * JS to lay results out in mulitple columns
