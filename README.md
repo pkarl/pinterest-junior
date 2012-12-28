@@ -27,8 +27,7 @@ There is a global `/static` directory located at the project root (the contents 
 
 ## TODO
 
-* JS to lay results out in mulitple columns
-* refine form template to use input[type=text] instead of textarea
 * style form
 * error handling code
 * tests
+* pinboard creation & organization
