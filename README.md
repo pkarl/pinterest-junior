@@ -2,6 +2,8 @@
 
 This is a super simple Django app that uses the embedly API to replicated Pinterest.
 
+![Pinterest Jr. Screenshot](http://i.imgur.com/3PJki.png)
+
 Admin user/pass is `admin` / `admin`
 
 ## Requirements
