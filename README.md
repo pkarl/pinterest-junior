@@ -1,10 +1,8 @@
 # Pinterest Jr.
 
-This is a super simple Django app that uses the embedly API to replicated Pinterest.
+This is a super simple Django app that uses the embedly API to replicate Pinterest (for learning purposes).
 
 ![Pinterest Jr. Screenshot](http://i.imgur.com/3PJki.png)
-
-Admin user/pass is `admin` / `admin`
 
 ## Requirements
 
@@ -20,6 +18,21 @@ wsgiref==0.1.2
 ```
 
 I recommend you use the wonderful `virtualenv` and `virtualenvwrapper` tools for your development environment.
+
+## Usage
+
+1. Clone the repo
+2. get your `virtualenv` up
+3. `cd app/app`
+4. run `python manage.py syncdb'
+5. run `python manage.py runserver`
+6. Go to `127.0.0.1:8000` in your web browser
+
+### Administration
+
+Go to `127.0.0.1:8000/admin` in your browser
+
+Admin user/pass is `admin` / `admin`
 
 ## Static file handling
 
