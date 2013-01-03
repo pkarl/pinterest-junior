@@ -17,12 +17,14 @@ from django.shortcuts import render_to_response
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 
-from models import Board, Link, LinkForm
+from models import Board, Link, LinkForm, BoardForm
 
 
 def home(request):
 
 	linkform = LinkForm()
+	boardform = BoardForm()
+	assert False
 
 	panels = []
 	[panels.append( ast.literal_eval(panel['data']) ) for panel in Link.objects.all().order_by('-date_created').values('data')]
