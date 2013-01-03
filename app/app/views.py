@@ -27,11 +27,19 @@ def home(request):
 	panels = []
 	[panels.append( ast.literal_eval(panel['data']) ) for panel in Link.objects.all().order_by('-date_created').values('data')]
 
-	return render_to_response('home.html', { 'form': linkform, 'panels': panels } , context_instance=RequestContext(request))
+	return render_to_response('home.html', { 'form': linkform, 'panels': panels, 'boards': Board.objects.all() } , context_instance=RequestContext(request))
 
-def process_url(request):
+def process_link(request):
 
 	f = LinkForm(request.POST)
 	link = f.save()
+
+	return HttpResponseRedirect('/');
+
+
+def process_board(request):
+
+	# f = LinkForm(request.POST)
+	# link = f.save()
 
 	return HttpResponseRedirect('/');

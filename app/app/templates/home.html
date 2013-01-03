@@ -6,6 +6,18 @@
 		{% include "link_form.html" %}
 	</header>
 
+	<div class="board-wrapper">
+
+		{% include "board_form.html" %}
+
+		<ul>
+		{% for board in boards %}
+			<ul>{{ board.name }}</ul>
+		{% endfor %}
+		</ul>
+
+	</div>
+
 	<div class="pinboard-wrapper">
 
 		<section class="pinboard">
