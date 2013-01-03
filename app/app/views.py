@@ -24,24 +24,36 @@ def home(request):
 
 	linkform = LinkForm()
 	boardform = BoardForm()
-	assert False
 
 	panels = []
 	[panels.append( ast.literal_eval(panel['data']) ) for panel in Link.objects.all().order_by('-date_created').values('data')]
 
-	return render_to_response('home.html', { 'form': linkform, 'panels': panels, 'boards': Board.objects.all() } , context_instance=RequestContext(request))
+	boards = []
+	for board in Board.objects.all():
+		boards.append( { 'name': board.name, 'links': Link.objects.filter(board_id=board.id)[:5] } )
+
+	# assert False
+
+	context = { 
+		'linkform': linkform, 
+		'boardform': boardform, 
+		'panels': panels, 
+		'boards': boards,
+	}
+
+	return render_to_response('home.html', context , context_instance=RequestContext(request))
 
 def process_link(request):
 
 	f = LinkForm(request.POST)
-	link = f.save()
+	f.save()
 
 	return HttpResponseRedirect('/');
 
 
 def process_board(request):
 
-	# f = LinkForm(request.POST)
-	# link = f.save()
+	f = BoardForm(request.POST)
+	f.save()
 
 	return HttpResponseRedirect('/');

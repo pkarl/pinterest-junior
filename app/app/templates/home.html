@@ -12,7 +12,13 @@
 
 		<ul>
 		{% for board in boards %}
-			<ul>{{ board.name }}</ul>
+			<li>{{ board.name }}
+				<ul>
+				{% for link in board.links %}
+					<li>{{ link }}</li>
+				{% endfor %}
+				</ul>
+			</li>
 		{% endfor %}
 		</ul>
 

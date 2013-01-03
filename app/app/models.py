@@ -7,7 +7,7 @@ from django.contrib import admin
 from settings import EMBEDLY_KEY
 
 class Board(models.Model):
-    name = models.TextField()
+    name = models.CharField(max_length="255")
     date_created = models.DateTimeField(auto_now=True, editable=False)
 
     def __unicode__(self):
