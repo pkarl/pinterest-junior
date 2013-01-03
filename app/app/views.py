@@ -27,7 +27,7 @@ def home(request):
 	panels = []
 	[panels.append( ast.literal_eval(panel['data']) ) for panel in Link.objects.all().order_by('-date_created').values('data')]
 
-	return render_to_response('home.html', { 'form': form, 'panels': panels } , context_instance=RequestContext(request))
+	return render_to_response('home.html', { 'form': linkform, 'panels': panels } , context_instance=RequestContext(request))
 
 def process_url(request):
 
