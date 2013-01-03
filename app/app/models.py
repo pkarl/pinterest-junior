@@ -6,11 +6,19 @@ from django.contrib import admin
 
 from settings import EMBEDLY_KEY
 
+class Board(models.Model):
+    name = models.TextField()
+    date_created = models.DateTimeField(auto_now=True, editable=False)
+
+    def __unicode__(self):
+        return self.name
+
 class Link(models.Model):
     name = models.CharField(max_length="255", editable=False)
     url = models.TextField()
     data = models.TextField(editable=False)
     date_created = models.DateTimeField(auto_now=True, editable=False)
+    board = models.ForeignKey(Board) # Adding FK to links
  
     def save(self, *args, **kwargs):
         """
@@ -39,3 +47,12 @@ class LinkAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Link, LinkAdmin)
+
+class BoardForm(ModelForm):
+    class Meta:
+        model = Board
+
+class BoardAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Board, BoardAdmin)
